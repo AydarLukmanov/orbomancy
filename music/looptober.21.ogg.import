@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/looptober.21.ogg-b1958ac57923ca2528ce38e62e497ec2.oggstr"
+
+[deps]
+
+source_file="res://music/looptober.21.ogg"
+dest_files=[ "res://.import/looptober.21.ogg-b1958ac57923ca2528ce38e62e497ec2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/s04.wav-66ec2211a9bb75a5dd39f9663cf702aa.sample"
+
+[deps]
+
+source_file="res://sound/s04.wav"
+dest_files=[ "res://.import/s04.wav-66ec2211a9bb75a5dd39f9663cf702aa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

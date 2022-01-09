@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/looptober.22.mp3-9ef8843309a7845a4c1b45ba2f49d717.mp3str"
+
+[deps]
+
+source_file="res://music/looptober.22.mp3"
+dest_files=[ "res://.import/looptober.22.mp3-9ef8843309a7845a4c1b45ba2f49d717.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

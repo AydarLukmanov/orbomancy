@@ -1,0 +1,170 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/ArcadiaGodot/ArcadiaHook.cs" type="Script" id=1]
+[ext_resource path="res://nodes/paddle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://fonts/apl385.tres" type="DynamicFont" id=3]
+[ext_resource path="res://sprites/boundry.png" type="Texture" id=4]
+[ext_resource path="res://sprites/reticule.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 35.5957, 384.076 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 483.927, 32.071 )
+
+[node name="level" type="Node2D"]
+script = ExtResource( 1 )
+tree_ready_fn = "#'game.core/level-ready"
+process_fn = "game.core/level-update"
+physics_process_fn = "#'game.core/level-physics"
+input_fn = "#'game.core/level-input"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 32.4455
+margin_top = 35.1181
+margin_right = 982.445
+margin_bottom = 735.118
+texture = ExtResource( 4 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NinePatchRect"]
+visible = false
+position = Vector2( 475, 350 )
+collision_mask = 2147483745
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NinePatchRect/StaticBody2D"]
+position = Vector2( -504.224, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="NinePatchRect/StaticBody2D"]
+position = Vector2( 503.035, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="NinePatchRect/StaticBody2D"]
+position = Vector2( -1.18924, -374.6 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="NinePatchRect/StaticBody2D"]
+position = Vector2( -1.18924, 373.066 )
+shape = SubResource( 2 )
+
+[node name="paddle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 574.255 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 511.371, 299.465 )
+current = true
+
+[node name="UI" type="Node2D" parent="."]
+position = Vector2( 38, 7 )
+
+[node name="orbs_label" type="Label" parent="UI"]
+margin_right = 70.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( -503.221, 166.359 )
+custom_colors/font_color = Color( 0.941176, 0.654902, 0.0470588, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "ORBS:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="orbs" type="Label" parent="UI"]
+margin_left = 71.0
+margin_right = 141.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( -574.221, 166.359 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score_label" type="Label" parent="UI"]
+margin_left = 149.384
+margin_right = 219.384
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( -503.221, 166.359 )
+custom_colors/font_color = Color( 0.941176, 0.654902, 0.0470588, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "SCORE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score" type="Label" parent="UI"]
+margin_left = 220.0
+margin_right = 408.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( -574.221, 166.359 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lvl_label" type="Label" parent="UI"]
+margin_left = 528.016
+margin_right = 598.016
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( -503.221, 166.359 )
+custom_colors/font_color = Color( 0.941176, 0.654902, 0.0470588, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "LEVEL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lvl" type="Label" parent="UI"]
+margin_left = 598.632
+margin_right = 786.632
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( -574.221, 166.359 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="phealth_label" type="Label" parent="UI"]
+margin_left = 675.905
+margin_right = 773.905
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( -503.221, 166.359 )
+custom_colors/font_color = Color( 0.941176, 0.654902, 0.0470588, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "PHEALTH"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="phealth" type="Label" parent="UI"]
+margin_left = 775.03
+margin_right = 963.03
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( -574.221, 166.359 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "[**********]"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="reticule" type="Sprite" parent="."]
+position = Vector2( 667.396, 509.434 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]

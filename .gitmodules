@@ -1,0 +1,4 @@
+[submodule "addons/ArcadiaGodot"]
+	path = addons/ArcadiaGodot
+	url = https://github.com/AydarLukmanov/ArcadiaGodot
+	branch = feature/replace-clr-with-magic

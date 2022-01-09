@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/z03.wav-0369f6daaa6d92201f1a8e5bbd1213ae.sample"
+
+[deps]
+
+source_file="res://sound/z03.wav"
+dest_files=[ "res://.import/z03.wav-0369f6daaa6d92201f1a8e5bbd1213ae.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

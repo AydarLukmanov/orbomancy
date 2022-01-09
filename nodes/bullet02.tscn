@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/bullet02.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 4.07553
+height = 7.94477
+
+[node name="bullet02" type="KinematicBody2D" groups=["bullet"]]
+collision_layer = 64
+collision_mask = 2147549184
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="bullet02" type="Sprite" parent="."]
+position = Vector2( -0.0313034, 0.478322 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
