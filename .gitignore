@@ -2,4 +2,5 @@
 .mono/
 .import/
 .clj-kondo/
+.lsp/
 .DS_Store
